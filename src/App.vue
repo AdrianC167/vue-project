@@ -1,46 +1,101 @@
 <script setup>
+import {ref} from "vue"
+
+
 
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="" width="125" height="125" />
+  <v-app id="inspire">
+    <v-app-bar
+      class="px-3"
+      color="white"
+      flat
+      density="compact"
+    >
+      <v-avatar
+        color="grey-darken-1"
+        size="32"
+      ></v-avatar>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
+      <v-spacer></v-spacer>
 
-  <main>
-    <TheWelcome />
-  </main>
+      <v-tabs
+        centered
+        color="grey-darken-2"
+      >
+        <v-tab
+          v-for="link in links"
+          :key="link"
+        >
+          {{ link }}
+        </v-tab>
+      </v-tabs>
+      <v-spacer></v-spacer>
+
+      <v-avatar
+        class="hidden-sm-and-down"
+        color="grey-darken-1"
+        size="32"
+      ></v-avatar>
+    </v-app-bar>
+
+    <v-main class="bg-grey-lighten-3">
+      <v-container>
+        <v-row>
+          <v-col
+            cols="12"
+            sm="2"
+          >
+            <v-sheet
+              rounded="lg"
+              min-height="268"
+            >
+              <!--  -->
+            </v-sheet>
+          </v-col>
+
+          <v-col
+            cols="12"
+            sm="8"
+          >
+            <v-sheet
+              min-height="70vh"
+              rounded="lg"
+            >
+              <!--  -->
+            </v-sheet>
+          </v-col>
+
+          <v-col
+            cols="12"
+            sm="2"
+          >
+            <v-sheet
+              rounded="lg"
+              min-height="268"
+            >
+              <!--  -->
+            </v-sheet>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-main>
+  </v-app>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+<script>
+  export default {
+    data: () => ({
+      links: [
+        'Home',
+        'Subnet Calculator',
+        'IP Checker',
+        'DNS Lookup',
+        'Binary Converter',
+        'TLS Cert Checker',
+      ],
+    }),
   }
+</script>
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
-</style>
