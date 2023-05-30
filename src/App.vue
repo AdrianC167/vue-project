@@ -1,4 +1,5 @@
 <script setup>
+import { hasScopeRef } from "@vue/compiler-core";
 import {ref} from "vue"
 
 
@@ -6,7 +7,22 @@ import {ref} from "vue"
 </script>
 
 <template>
-  <v-app id="inspire">
+  <v-tabs> 
+  <v-tab to="/">Home</v-tab>
+   &nbsp;
+  <v-tab to="/subnet">Subnet Calculator</v-tab>
+  &nbsp;
+  <v-tab to="/IP-checker">IP Checker</v-tab>
+  &nbsp;
+  <v-tab to="/DNS-Lookup">DNS Lookup</v-tab>
+  &nbsp;
+  <v-tab to="/Binary-converter">Binary Converter</v-tab>
+  &nbsp;
+  <v-tab to="/TLS">TLS Certificate Checker</v-tab> 
+  </v-tabs>
+ <RouterView/>
+
+  <!-- <v-app id="inspire">
     <v-app-bar
       class="px-3"
       color="white"
@@ -51,7 +67,7 @@ import {ref} from "vue"
               rounded="lg"
               min-height="268"
             >
-              <!--  -->
+              
             </v-sheet>
           </v-col>
 
@@ -63,7 +79,7 @@ import {ref} from "vue"
               min-height="70vh"
               rounded="lg"
             >
-              <!--  -->
+              
             </v-sheet>
           </v-col>
 
@@ -75,13 +91,15 @@ import {ref} from "vue"
               rounded="lg"
               min-height="268"
             >
-              <!--  -->
+              
             </v-sheet>
           </v-col>
         </v-row>
       </v-container>
     </v-main>
   </v-app>
+ -->
+
 </template>
 
 <script>
