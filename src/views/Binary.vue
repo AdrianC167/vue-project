@@ -1,4 +1,15 @@
-<script>
+<script setup>
+import {ref, watch} from "vue"
+
+let output = ref("")
+let number =  ref("")
+
+
+async function convertBinary() {
+    let result = await fetch("https://networkcalc.com/api/binary/" + number.value)
+    output.value = await result.json()
+}
+
 
 </script>
 
@@ -7,6 +18,13 @@
         <h1>Binary Converter</h1>
     </div>
     <v-divider :thickness="4"></v-divider>
+
+
+
+<v-text-field label="Input a binary value" variant="solo-filled" id="input" v-model="number"></v-text-field>
+<v-btn @click="convertBinary">Convert</v-btn>
+<hr>
+<div>{{ output.converted }}</div>
 
 </template>
 
