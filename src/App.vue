@@ -30,7 +30,6 @@ import {ref} from "vue"
       >
       <v-tab to="/">Home</v-tab>
       <v-tab to="/subnet">Subnet Calculator</v-tab>
-      <v-tab to="/IP-checker">IP Checker</v-tab>
       <v-tab to="/DNS-Lookup">DNS Lookup</v-tab>
       <v-tab to="/Binary-converter">Binary Converter</v-tab>
       <v-tab to="/TLS">TLS Certificate Checker</v-tab> 
