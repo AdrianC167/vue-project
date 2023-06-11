@@ -19,7 +19,7 @@ async function dnsLook() {
         <h1>DNS Lookup</h1>
     </div>
     <v-divider :thickness="4"></v-divider>
-    <v-text-field label="Input a DNS, Hostname or IP Address(Please make sure you enter the right Hostname/DNS/IP address)" variant="solo-filled" id="input" v-model="name"></v-text-field>
+    <v-text-field @keydown.enter="dnsLook" label="Input a DNS, Hostname or IP Address(Please make sure you enter the right Hostname/DNS/IP address)" variant="solo-filled" id="input" v-model="name"></v-text-field>
     <v-btn @click="dnsLook" id="button">Search</v-btn>
     <hr>
     <div>Hostname: {{ output?.hostname }}</div>

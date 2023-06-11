@@ -18,7 +18,7 @@ async function dnsLook() {
         <h1>TLS Certificate Checker</h1>
     </div>
     <v-divider :thickness="4"></v-divider>
-    <v-text-field label="Input an DNS/Hostname/IP Address(Please make sure your Hostname/DNS/IP address is accurate)" variant="solo-filled" id="input" v-model="name"></v-text-field>
+    <v-text-field @keydown.enter="dnsLook" label="Input an DNS/Hostname/IP Address(Please make sure your Hostname/DNS/IP address is accurate)" variant="solo-filled" id="input" v-model="name"></v-text-field>
     <v-btn @click="dnsLook"  id="button">Search</v-btn>
     <hr>
     <h4>Meta:</h4>
