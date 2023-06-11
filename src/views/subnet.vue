@@ -20,7 +20,7 @@ async function ipLook() {
     <v-divider :thickness="4"></v-divider>
 
 <v-text-field label="Input a proper ip value(otherwise no value will show)" variant="solo-filled" id="input" v-model="number"></v-text-field>
-<v-btn @click="ipLook">Calculate</v-btn>
+<v-btn @click="ipLook" id="button">Calculate</v-btn>
 <hr>
 <div>cidr notation: {{ output?.address.cidr_notation }}</div>
 <br>
@@ -52,6 +52,9 @@ async function ipLook() {
 
 }
 
-
+#button{
+width: 100%;
+    
+}
 
 </style>

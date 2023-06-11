@@ -22,9 +22,9 @@ async function convertBinary() {
 
 
 <v-text-field label="Input a binary value" variant="solo-filled" id="input" v-model="number"></v-text-field>
-<v-btn @click="convertBinary">Convert</v-btn>
+<v-btn @click="convertBinary" id="button">Convert</v-btn>
 <hr>
-<div>Binary Value: {{ output.converted }}</div>
+<div id="decor">Binary Value: {{ output.converted }}</div>
 
 </template>
 
@@ -38,5 +38,14 @@ async function convertBinary() {
 
 }
 
+#button{
+width: 100%;
+    
+}
 
+#decor {
+
+padding-top: 10px;
+padding-left: 10px;
+}
 </style>

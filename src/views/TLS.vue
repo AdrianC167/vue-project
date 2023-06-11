@@ -19,7 +19,7 @@ async function dnsLook() {
     </div>
     <v-divider :thickness="4"></v-divider>
     <v-text-field label="Input an DNS/Hostname/IP Address(Please make sure your Hostname/DNS/IP address is accurate)" variant="solo-filled" id="input" v-model="name"></v-text-field>
-    <v-btn @click="dnsLook">Search</v-btn>
+    <v-btn @click="dnsLook"  id="button">Search</v-btn>
     <hr>
     <h4>Meta:</h4>
     <div>Protocol: {{ output?.meta?.protocol }}</div>
@@ -68,5 +68,8 @@ async function dnsLook() {
 
 }
 
-
+#button{
+width: 100%;
+    
+}
 </style>

@@ -20,7 +20,7 @@ async function dnsLook() {
     </div>
     <v-divider :thickness="4"></v-divider>
     <v-text-field label="Input a DNS, Hostname or IP Address(Please make sure you enter the right Hostname/DNS/IP address)" variant="solo-filled" id="input" v-model="name"></v-text-field>
-    <v-btn @click="dnsLook">Search</v-btn>
+    <v-btn @click="dnsLook" id="button">Search</v-btn>
     <hr>
     <div>Hostname: {{ output?.hostname }}</div>
     <v-divider :thickness="4"></v-divider> 
@@ -60,4 +60,8 @@ text-align: left;
 
 }
 
+#button{
+width: 100%;
+    
+}
 </style>

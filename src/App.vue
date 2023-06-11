@@ -61,6 +61,8 @@ import {ref} from "vue"
             <a href="https://networkcalc.com/articles/find-your-external-ip">How to Find Your External IP Address: A Simple Guide</a>
             <v-divider :thickness="1"></v-divider>
             <a href="https://networkcalc.com/articles/subnet-mask-cheat-sheet">Subnet Mask Cheat Sheet</a>
+            <v-divider :thickness="1"></v-divider>
+            <a href="https://networkcalc.com/articles/vlsm-calculator">The VLSM Calculator: Easily Calculate Subnet Masks</a>
             </v-sheet>
           </v-col>
 
@@ -84,7 +86,15 @@ import {ref} from "vue"
               rounded="lg"
               min-height="268"
             >
-              
+            <h4>Version 1.07</h4>
+            <p>Added all API's and is fully functional</p>
+            <v-divider :thickness="1"></v-divider>
+            <h4>Version 1.06</h4>
+            <p>3 API's have been implemented and fully functional</p>
+            <v-divider :thickness="1"></v-divider>
+            <h4>Version 1.05</h4>
+            <p>Functional website with one API implemented</p>
+
             </v-sheet>
           </v-col>
         </v-row>
